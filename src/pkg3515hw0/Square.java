@@ -5,12 +5,41 @@
  */
 package pkg3515hw0;
 
-import javafx.scene.shape.Shape;
 
 /**
  *
  * @author tuc73313
  */
 public class Square extends Shape {
-
+    
+    private double length;
+    private double height;
+    
+    public Square(String name) { 
+        super(name);
+        length = 0.0;
+        height = 0.0;
+    }
+    
+    /**
+     * @return square's area */ 
+    @Override
+    public double getArea() { 
+        return length * height; 
+    }
+    
+    /**
+     * Set the square's length and height */ 
+    public void setDimensions(double l, double h){
+        length = l;
+        height = h;
+    }
+    
+    /**
+     *prints square's Dimensions
+     */
+    @Override
+    public void printDimensions(){ 
+        System.out.println("Length: " + length + "\nHeight: " + height); 
+    }
 }
